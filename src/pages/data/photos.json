@@ -1,0 +1,33 @@
+{
+    "title": "Photos",
+    "description": "Photos",
+    "icon": "fi-rr-picture",
+    "bgColor": "rgb(112, 7, 112)",
+    "data" : [
+        {
+            "size": "10kb",
+            "format": "jpeg",
+            "url": "https://farm8.staticflickr.com/7560/16000000000_0000000000_n.jpg"
+        },
+        {
+            "size": "20kb",
+            "format": "jpeg",
+            "url": "https://farm8.staticflickr.com/7560/16000000000_0000000000_n.jpg"
+        },
+        {
+            "size": "30kb",
+            "format": "jpeg",
+            "url": "https://farm8.staticflickr.com/7560/16000000000_0000000000_n.jpg"
+        },
+        {
+            "size": "10kb",
+            "format": "png",
+            "url": "https://farm8.staticflickr.com/7560/16000000000_0000000000_n.jpg"
+        },
+        {
+            "size": "30kb",
+            "format": "png",
+            "url": "https://farm8.staticflickr.com/7560/16000000000_0000000000_n.jpg"
+        }
+    ]
+}

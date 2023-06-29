@@ -1,0 +1,34 @@
+{
+    "title": "Videos",
+    "description": "Videos",
+    "icon": "fi-rr-film",
+    "bgColor": "rgb(17, 107, 181)",
+    "data": [
+      {
+        "size": "100MB",
+        "format": "mp4",
+        "url": "https://example.com/video1.mp4"
+      },
+      {
+        "size": "200MB",
+        "format": "mp4",
+        "url": "https://example.com/video2.mp4"
+      },
+      {
+        "size": "300MB",
+        "format": "mkv",
+        "url": "https://example.com/video3.mp4"
+      },
+      {
+        "size": "150MB",
+        "format": "mkv",
+        "url": "https://example.com/video4.mkv"
+      },
+      {
+        "size": "250MB",
+        "format": "mkv",
+        "url": "https://example.com/video5.mkv"
+      }
+    ]
+  }
+  
