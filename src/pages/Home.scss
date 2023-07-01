@@ -56,6 +56,7 @@
                     align-items: center;
                     justify-content: space-between;
                     ul{
+                        width: 60%;
                         display: flex;
                         flex-wrap: wrap;
                         gap: 0.6rem;  
@@ -147,12 +148,20 @@
         .list_box{
             .list_container{
                 .item_expand{
+                    padding: 0.5rem;
                     .item_expand_card{
-                        min-width: 47%;
+                        min-width: 48%;
                     }
                     .category_container{
                         flex-direction: column;
                         gap: 10px;
+                        ul{
+                            width: 100%;
+                            justify-content: center;
+                        }
+                    }
+                    .card_container{
+                        gap: 0.5rem;
                     }
                 }
             }
