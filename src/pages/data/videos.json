@@ -5,27 +5,27 @@
     "bgColor": "rgb(17, 107, 181)",
     "data": [
       {
-        "size": "100MB",
+        "size": 100,
         "format": "mp4",
         "url": "https://example.com/video1.mp4"
       },
       {
-        "size": "200MB",
+        "size": 200,
         "format": "mp4",
         "url": "https://example.com/video2.mp4"
       },
       {
-        "size": "300MB",
+        "size": 300,
         "format": "mkv",
         "url": "https://example.com/video3.mp4"
       },
       {
-        "size": "150MB",
+        "size": 150,
         "format": "mkv",
         "url": "https://example.com/video4.mkv"
       },
       {
-        "size": "250MB",
+        "size": 250,
         "format": "mkv",
         "url": "https://example.com/video5.mkv"
       }

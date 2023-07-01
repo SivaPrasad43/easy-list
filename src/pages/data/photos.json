@@ -5,27 +5,27 @@
     "bgColor": "rgb(112, 7, 112)",
     "data" : [
         {
-            "size": "10kb",
+            "size": 10,
             "format": "jpeg",
             "url": "https://farm8.staticflickr.com/7560/16000000000_0000000000_n.jpg"
         },
         {
-            "size": "20kb",
+            "size": 20,
             "format": "jpeg",
             "url": "https://farm8.staticflickr.com/7560/16000000000_0000000000_n.jpg"
         },
         {
-            "size": "30kb",
+            "size": 30,
             "format": "jpeg",
             "url": "https://farm8.staticflickr.com/7560/16000000000_0000000000_n.jpg"
         },
         {
-            "size": "10kb",
+            "size": 10,
             "format": "png",
             "url": "https://farm8.staticflickr.com/7560/16000000000_0000000000_n.jpg"
         },
         {
-            "size": "30kb",
+            "size": 30,
             "format": "png",
             "url": "https://farm8.staticflickr.com/7560/16000000000_0000000000_n.jpg"
         }
