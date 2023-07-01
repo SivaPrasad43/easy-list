@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 
 import './Home.scss'
 
@@ -62,6 +63,10 @@ const ItemContainer = ({ title, data, icon, bgColor }) => {
     const uniqueFormats = [...new Set(data?.map(item => item.format))];
     setCategoryItems(['All', ...uniqueFormats]);
     setLoading(false)
+    return(
+      setMinSize(1),
+      setMaxSize(10000)
+    )
   }, [expanded]);
 
   function filterDatas(){
@@ -113,6 +118,7 @@ const ItemContainer = ({ title, data, icon, bgColor }) => {
           </div>
           <i className={`fi fi-ss-angle-small-${expanded ? "up" : "down"}`}></i>
         </div>
+      </a>
         {expanded && (
           <div className="item_expand">
             <div className="category_container">
@@ -177,7 +183,6 @@ const ItemContainer = ({ title, data, icon, bgColor }) => {
             }
           </div>
         )}
-      </a>
     </li>
   );
 };
