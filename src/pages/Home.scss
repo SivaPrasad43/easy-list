@@ -3,6 +3,7 @@
     height: 100vh;
     display: grid;
     overflow-y: scroll;
+    scroll-behavior: smooth;
     .list_box{
         max-width: 800px;
         width: 100%;
