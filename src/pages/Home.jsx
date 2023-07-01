@@ -6,13 +6,14 @@ import './Home.scss'
 
 import PhotosData from './data/photos.json'
 import VideosData from './data/videos.json'
+import AudiosData  from './data/audio.json'
 
 
 const Home = () => {
   return (
     <div className="home_container">
       <div className="list_box">
-        <div className="list_title">List</div>
+        <div className="list_title">Samples</div>
         <div className="list_container">
           <ul>
             <ItemContainer
@@ -26,6 +27,12 @@ const Home = () => {
               data={VideosData.data}
               icon={VideosData.icon}
               bgColor={VideosData.bgColor}
+            />
+            <ItemContainer
+              title={AudiosData.title}
+              data={AudiosData.data}
+              icon={AudiosData.icon}
+              bgColor={AudiosData.bgColor}
             />
           </ul>
         </div>
@@ -51,7 +58,6 @@ const ItemContainer = ({ title, data, icon, bgColor }) => {
   };
 
   useEffect(() => {
-    console.log(data);
     setCardData(data)
     const uniqueFormats = [...new Set(data?.map(item => item.format))];
     setCategoryItems(['All', ...uniqueFormats]);
@@ -81,7 +87,7 @@ const ItemContainer = ({ title, data, icon, bgColor }) => {
     if (sizeInKB < 1024) {
       return sizeInKB + " KB";
     } else if (sizeInKB < 1048576) {
-      const sizeInMB = (sizeInKB / 1024).toFixed(2);
+      const sizeInMB = (sizeInKB / 1024).toFixed(0);
       return sizeInMB + " MB";
     } else {
       const sizeInGB = (sizeInKB / 1048576).toFixed(2);
@@ -99,77 +105,79 @@ const ItemContainer = ({ title, data, icon, bgColor }) => {
 
   return (
     <li>
-      <div className="item_container" onClick={handleClick}>
-        <div className="item_title">
-          <i className="fi fi-rr-folder"></i>
-          <p>{title}</p>
-        </div>
-        <i className={`fi fi-ss-angle-small-${expanded ? "up" : "down"}`}></i>
-      </div>
-      {expanded && (
-        <div className="item_expand">
-          <div className="category_container">
-            <ul>
-              {
-                categoryItems.map((item, index) => (
-                  <CategoryItem
-                    key={index}
-                    item={item}
-                    activeItem={activeItem}
-                    setActiveItem={setActiveItem}
-                  />
-                ))
-              }
-            </ul>
-            <div className="size_container">
-              <p>Size:</p>
-              <div className="size_box">
-                <div className='size_title'>Min</div>
-                <select name="min" id="min" value={minSize} onChange={handleMinChange}>
-                  {
-                    sizeArray.map((item, index) => (
-                      <option key={index} value={item}>{formatFileSize(item)}</option>
-                    ))
-                  }
-                </select>
-              </div>
-              <div className="size_box">
-                <div className='size_title'>Max</div>
-                <select name="max" id="max" value={maxSize} onChange={handleMaxChange}>
-                  {
-                    sizeArray.map((item, index) => (
-                      <option key={index} value={item}>{formatFileSize(item)}</option>
-                    ))
-                  }
-                </select>
-              </div>
-            </div>
+      <a href={`#${title}`}>
+        <div id={title} className="item_container" onClick={handleClick}>
+          <div className="item_title">
+            <i className="fi fi-rr-folder"></i>
+            <p>{title}</p>
           </div>
-          {
-            loading ? (
-              <p>Loading..</p>
-            ) : (
-              <div className="card_container">
+          <i className={`fi fi-ss-angle-small-${expanded ? "up" : "down"}`}></i>
+        </div>
+        {expanded && (
+          <div className="item_expand">
+            <div className="category_container">
+              <ul>
                 {
-                  cardData.map((item, index) => (
-                    <Cards
+                  categoryItems.map((item, index) => (
+                    <CategoryItem
                       key={index}
-                      size={item.size}
-                      format={item.format}
-                      url={item.url}
-                      img={icon}
-                      bgColor={bgColor}
+                      item={item}
+                      activeItem={activeItem}
+                      setActiveItem={setActiveItem}
                     />
                   ))
                 }
-                {
-                  cardData.length === 0 && <p>File not exist !</p>
-                }
+              </ul>
+              <div className="size_container">
+                <p>Size:</p>
+                <div className="size_box">
+                  <div className='size_title'>Min</div>
+                  <select name="min" id="min" value={minSize} onChange={handleMinChange}>
+                    {
+                      sizeArray.map((item, index) => (
+                        <option key={index} value={item}>{formatFileSize(item)}</option>
+                      ))
+                    }
+                  </select>
+                </div>
+                <div className="size_box">
+                  <div className='size_title'>Max</div>
+                  <select name="max" id="max" value={maxSize} onChange={handleMaxChange}>
+                    {
+                      sizeArray.map((item, index) => (
+                        <option key={index} value={item}>{formatFileSize(item)}</option>
+                      ))
+                    }
+                  </select>
+                </div>
               </div>
-            )
-          }
-        </div>
-      )}
+            </div>
+            {
+              loading ? (
+                <p>Loading..</p>
+              ) : (
+                <div className="card_container">
+                  {
+                    cardData.map((item, index) => (
+                      <Cards
+                        key={index}
+                        size={formatFileSize(item.size)}
+                        format={item.format}
+                        url={item.url}
+                        img={icon}
+                        bgColor={bgColor}
+                      />
+                    ))
+                  }
+                  {
+                    cardData.length === 0 && <p>File not exist !</p>
+                  }
+                </div>
+              )
+            }
+          </div>
+        )}
+      </a>
     </li>
   );
 };

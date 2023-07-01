@@ -20,7 +20,7 @@
         "url": "https://example.com/video3.mp4"
       },
       {
-        "size": 150,
+        "size": 1024,
         "format": "mkv",
         "url": "https://example.com/video4.mkv"
       },

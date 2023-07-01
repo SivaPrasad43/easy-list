@@ -21,11 +21,14 @@ i{
   align-self: center;
 }
 
-a,a:hover,a:focus{
+a,
+a:hover,
+a:focus {
+  color: white !important;
   font-weight: 500;
   text-decoration: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
-
 body {
   margin: 0;
   display: flex;

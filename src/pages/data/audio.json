@@ -1,0 +1,33 @@
+{
+    "title": "Audios",
+    "icon": "fi-rr-waveform-path",
+    "bgColor": "rgb(0, 128, 128)",
+    "data": [
+      {
+        "size": 100,
+        "format": "mp3",
+        "url": "https://example.com/audio1.mp3"
+      },
+      {
+        "size": 200,
+        "format": "mp3",
+        "url": "https://example.com/audio2.mp3"
+      },
+      {
+        "size": 300,
+        "format": "wav",
+        "url": "https://example.com/audio3.wav"
+      },
+      {
+        "size": 1024,
+        "format": "wav",
+        "url": "https://example.com/audio4.wav"
+      },
+      {
+        "size": 250,
+        "format": "mp3",
+        "url": "https://example.com/audio5.mp3"
+      }
+    ]
+  }
+  

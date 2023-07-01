@@ -137,7 +137,7 @@
             font-size: 0.6rem;
         }
         &:hover{
-            background-color: rgb(10, 133, 10);
+            background-color: rgb(35, 133, 10);
         }
     }
 }
@@ -149,6 +149,10 @@
                 .item_expand{
                     .item_expand_card{
                         min-width: 47%;
+                    }
+                    .category_container{
+                        flex-direction: column;
+                        gap: 10px;
                     }
                 }
             }
