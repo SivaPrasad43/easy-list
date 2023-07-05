@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 
 import './Home.scss'
+import Footer from '../components/Footer/Footer';
 
 import PhotosData from './data/photos.json'
 import VideosData from './data/videos.json'
@@ -40,6 +41,7 @@ const Home = () => {
           </ul>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

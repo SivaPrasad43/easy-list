@@ -1,0 +1,30 @@
+.nav_outer_container {
+  width: 100%;
+  padding: 1rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(9, 8, 8, 0.3490196078);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #292626;
+}
+.nav_outer_container .nav_inner_container {
+  flex: 1;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav_outer_container .nav_inner_container .login_logo {
+  width: 100px;
+}
+.nav_outer_container .nav_inner_container .login_btn {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 6px 18px;
+  background-color: #9a47e9;
+}/*# sourceMappingURL=Navbar.css.map */
