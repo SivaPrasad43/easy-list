@@ -8,12 +8,15 @@ import PhotosData from './data/photos.json'
 import VideosData from './data/videos.json'
 import AudiosData  from './data/audio.json'
 
+import Logo from '../assets/logo.png'
 
 const Home = () => {
   return (
     <div className="home_container">
       <div className="list_box">
-        <div className="list_title">Samples</div>
+        <div className="list_title">
+          <img src={Logo} alt="logo" />
+        </div>
         <div className="list_container">
           <ul>
             <ItemContainer
