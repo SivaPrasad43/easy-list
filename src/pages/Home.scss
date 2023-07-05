@@ -158,9 +158,6 @@
             .list_container{
                 .item_expand{
                     padding: 0.5rem;
-                    .item_expand_card{
-                        min-width: 48%;
-                    }
                     .category_container{
                         flex-direction: column;
                         gap: 10px;
@@ -170,7 +167,14 @@
                         }
                     }
                     .card_container{
-                        gap: 0.5rem;
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-grow: 1;
+                        gap: 10px;
+                        box-sizing: border-box;
+                        .item_expand_card{
+                            flex: 0 0 calc(50% - 5px);
+                        }
                     }
                 }
             }
